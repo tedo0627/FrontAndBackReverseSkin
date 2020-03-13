@@ -138,24 +138,50 @@ namespace FrontAndBackReverseSkin
 
         private void RightArm(Bitmap read, Bitmap write, Boolean outSide)
         {
-            CutOut(read, write, 4, 4, 44, 16, 44, 16, RotateFlipType.Rotate180FlipNone, outSide, 0, 16); //上
-            CutOut(read, write, 4, 4, 48, 16, 48, 16, RotateFlipType.Rotate180FlipNone, outSide, 0, 16); //下
+            if (slimCheck.Checked)
+            {
+                CutOut(read, write, 3, 4, 44, 16, 44, 16, RotateFlipType.Rotate180FlipNone, outSide, 0, 16); //上
+                CutOut(read, write, 3, 4, 47, 16, 47, 16, RotateFlipType.Rotate180FlipNone, outSide, 0, 16); //下
 
-            CutOut(read, write, 4, 12, 40, 20, 48, 20, null, outSide, 0, 16); //左
-            CutOut(read, write, 4, 12, 44, 20, 52, 20, null, outSide, 0, 16); //正面
-            CutOut(read, write, 4, 12, 48, 20, 40, 20, null, outSide, 0, 16); //右
-            CutOut(read, write, 4, 12, 52, 20, 44, 20, null, outSide, 0, 16); //後ろ
+                CutOut(read, write, 4, 12, 40, 20, 47, 20, null, outSide, 0, 16); //左
+                CutOut(read, write, 3, 12, 44, 20, 51, 20, null, outSide, 0, 16); //正面
+                CutOut(read, write, 4, 12, 47, 20, 40, 20, null, outSide, 0, 16); //右
+                CutOut(read, write, 3, 12, 51, 20, 44, 20, null, outSide, 0, 16); //後ろ
+            }
+            else
+            {
+                CutOut(read, write, 4, 4, 44, 16, 44, 16, RotateFlipType.Rotate180FlipNone, outSide, 0, 16); //上
+                CutOut(read, write, 4, 4, 48, 16, 48, 16, RotateFlipType.Rotate180FlipNone, outSide, 0, 16); //下
+
+                CutOut(read, write, 4, 12, 40, 20, 48, 20, null, outSide, 0, 16); //左
+                CutOut(read, write, 4, 12, 44, 20, 52, 20, null, outSide, 0, 16); //正面
+                CutOut(read, write, 4, 12, 48, 20, 40, 20, null, outSide, 0, 16); //右
+                CutOut(read, write, 4, 12, 52, 20, 44, 20, null, outSide, 0, 16); //後ろ
+            }
         }
 
         private void LeftArm(Bitmap read, Bitmap write, Boolean outSide)
         {
-            CutOut(read, write, 4, 4, 36, 48, 36, 48, RotateFlipType.Rotate180FlipNone, outSide, 16, 0); //上
-            CutOut(read, write, 4, 4, 40, 48, 40, 48, RotateFlipType.Rotate180FlipNone, outSide, 16, 0); //下
+            if (slimCheck.Checked)
+            {
+                CutOut(read, write, 3, 4, 36, 48, 36, 48, RotateFlipType.Rotate180FlipNone, outSide, 16, 0); //上
+                CutOut(read, write, 3, 4, 39, 48, 39, 48, RotateFlipType.Rotate180FlipNone, outSide, 16, 0); //下
 
-            CutOut(read, write, 4, 12, 32, 52, 40, 52, null, outSide, 16, 0); //左
-            CutOut(read, write, 4, 12, 36, 52, 44, 52, null, outSide, 16, 0); //正面
-            CutOut(read, write, 4, 12, 40, 52, 32, 52, null, outSide, 16, 0); //右
-            CutOut(read, write, 4, 12, 44, 52, 36, 52, null, outSide, 16, 0); //後ろ
+                CutOut(read, write, 4, 12, 32, 52, 39, 52, null, outSide, 16, 0); //左
+                CutOut(read, write, 3, 12, 35, 52, 43, 52, null, outSide, 16, 0); //正面
+                CutOut(read, write, 4, 12, 39, 52, 32, 52, null, outSide, 16, 0); //右
+                CutOut(read, write, 3, 12, 43, 52, 35, 52, null, outSide, 16, 0); //後ろ
+            }
+            else
+            {
+                CutOut(read, write, 4, 4, 36, 48, 36, 48, RotateFlipType.Rotate180FlipNone, outSide, 16, 0); //上
+                CutOut(read, write, 4, 4, 40, 48, 40, 48, RotateFlipType.Rotate180FlipNone, outSide, 16, 0); //下
+
+                CutOut(read, write, 4, 12, 32, 52, 40, 52, null, outSide, 16, 0); //左
+                CutOut(read, write, 4, 12, 36, 52, 44, 52, null, outSide, 16, 0); //正面
+                CutOut(read, write, 4, 12, 40, 52, 32, 52, null, outSide, 16, 0); //右
+                CutOut(read, write, 4, 12, 44, 52, 36, 52, null, outSide, 16, 0); //後ろ
+            }
         }
 
         private void CutOut(Bitmap read, Bitmap write, int pixelX, int pixelY, int cutX, int cutY, int putX, int putY, RotateFlipType? rotateType, Boolean outSide = false, int outOffsetX = 0, int outOffsetY = 0)

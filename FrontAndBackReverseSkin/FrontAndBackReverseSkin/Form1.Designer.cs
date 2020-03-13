@@ -36,6 +36,7 @@
             this.basePath = new System.Windows.Forms.TextBox();
             this.createPath = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.slimCheck = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // button1
@@ -60,7 +61,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(61, 237);
+            this.button3.Location = new System.Drawing.Point(61, 289);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -104,11 +105,22 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // slimCheck
+            // 
+            this.slimCheck.AutoSize = true;
+            this.slimCheck.Location = new System.Drawing.Point(61, 232);
+            this.slimCheck.Name = "slimCheck";
+            this.slimCheck.Size = new System.Drawing.Size(244, 16);
+            this.slimCheck.TabIndex = 8;
+            this.slimCheck.Text = "スリムスキンかどうか(スキンが黒くなったらチェック)";
+            this.slimCheck.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 332);
+            this.ClientSize = new System.Drawing.Size(437, 372);
+            this.Controls.Add(this.slimCheck);
             this.Controls.Add(this.createPath);
             this.Controls.Add(this.basePath);
             this.Controls.Add(this.label2);
@@ -133,6 +145,7 @@
         private System.Windows.Forms.TextBox basePath;
         private System.Windows.Forms.TextBox createPath;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.CheckBox slimCheck;
     }
 }
 

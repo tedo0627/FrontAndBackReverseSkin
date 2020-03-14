@@ -110,9 +110,9 @@
             this.slimCheck.AutoSize = true;
             this.slimCheck.Location = new System.Drawing.Point(61, 232);
             this.slimCheck.Name = "slimCheck";
-            this.slimCheck.Size = new System.Drawing.Size(244, 16);
+            this.slimCheck.Size = new System.Drawing.Size(300, 16);
             this.slimCheck.TabIndex = 8;
-            this.slimCheck.Text = "スリムスキンかどうか(スキンが黒くなったらチェック)";
+            this.slimCheck.Text = "スリムスキンかどうか(スキンの腕の一部が黒くなったらチェック)";
             this.slimCheck.UseVisualStyleBackColor = true;
             // 
             // Form1

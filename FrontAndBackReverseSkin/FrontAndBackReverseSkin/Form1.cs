@@ -105,24 +105,50 @@ namespace FrontAndBackReverseSkin
 
         private void RightLeg(Bitmap read, Bitmap write, Boolean outSide)
         {
-            CutOut(read, write, 4, 4, 4, 16, 4, 16, RotateFlipType.Rotate180FlipNone, outSide, 0, 16); //上
-            CutOut(read, write, 4, 4, 8, 16, 8, 16, RotateFlipType.Rotate180FlipNone, outSide, 0, 16); //下
+            if (outSide)
+            {
+                CutOut(read, write, 4, 4, 4, 32, 4, 48, RotateFlipType.Rotate180FlipNone); //上
+                CutOut(read, write, 4, 4, 8, 32, 8, 48, RotateFlipType.Rotate180FlipNone); //下
 
-            CutOut(read, write, 4, 12, 0, 20, 8, 20, null, outSide, 0, 16); //左
-            CutOut(read, write, 4, 12, 4, 20, 12, 20, null, outSide, 0, 16); //正面
-            CutOut(read, write, 4, 12, 8, 20, 0, 20, null, outSide, 0, 16); //右
-            CutOut(read, write, 4, 12, 12, 20, 4, 20, null, outSide, 0, 16); //後ろ
+                CutOut(read, write, 4, 12, 0, 36, 8, 52, null); //左
+                CutOut(read, write, 4, 12, 4, 36, 12, 52, null); //正面
+                CutOut(read, write, 4, 12, 8, 36, 0, 52, null); //右
+                CutOut(read, write, 4, 12, 12, 36, 4, 52, null); //後ろ
+            }
+            else
+            {
+                CutOut(read, write, 4, 4, 4, 16, 20, 48, RotateFlipType.Rotate180FlipNone); //上
+                CutOut(read, write, 4, 4, 8, 16, 24, 48, RotateFlipType.Rotate180FlipNone); //下
+
+                CutOut(read, write, 4, 12, 0, 20, 24, 52, null); //左
+                CutOut(read, write, 4, 12, 4, 20, 28, 52, null); //正面
+                CutOut(read, write, 4, 12, 8, 20, 16, 52, null); //右
+                CutOut(read, write, 4, 12, 12, 20, 20, 52, null); //後ろ
+            }
         }
 
         private void LeftLeg(Bitmap read, Bitmap write, Boolean outSide)
         {
-            CutOut(read, write, 4, 4, 4, 48, 4, 48, RotateFlipType.Rotate180FlipNone, outSide, 16, 0); //上
-            CutOut(read, write, 4, 4, 8, 48, 8, 48, RotateFlipType.Rotate180FlipNone, outSide, 16, 0); //下
+            if (outSide)
+            {
+                CutOut(read, write, 4, 4, 4, 48, 4, 32, RotateFlipType.Rotate180FlipNone); //上
+                CutOut(read, write, 4, 4, 8, 48, 8, 32, RotateFlipType.Rotate180FlipNone); //下
 
-            CutOut(read, write, 4, 12, 0, 52, 8, 52, null, outSide, 16, 0); //左
-            CutOut(read, write, 4, 12, 4, 52, 12, 52, null, outSide, 16, 0); //正面
-            CutOut(read, write, 4, 12, 8, 52, 0, 52, null, outSide, 16, 0); //右
-            CutOut(read, write, 4, 12, 12, 52, 4, 52, null, outSide, 16, 0); //後ろ
+                CutOut(read, write, 4, 12, 0, 52, 8, 36, null); //左
+                CutOut(read, write, 4, 12, 4, 52, 12, 36, null); //正面
+                CutOut(read, write, 4, 12, 8, 52, 0, 36, null); //右
+                CutOut(read, write, 4, 12, 12, 52, 4, 36, null); //後ろ
+            }
+            else
+            {
+                CutOut(read, write, 4, 4, 20, 48, 4, 16, RotateFlipType.Rotate180FlipNone); //上
+                CutOut(read, write, 4, 4, 24, 48, 8, 16, RotateFlipType.Rotate180FlipNone); //下
+
+                CutOut(read, write, 4, 12, 16, 52, 8, 20, null); //左
+                CutOut(read, write, 4, 12, 20, 52, 12, 20, null); //正面
+                CutOut(read, write, 4, 12, 24, 52, 0, 20, null); //右
+                CutOut(read, write, 4, 12, 28, 52, 4, 20, null); //後ろ
+            }
         }
 
         private void Body(Bitmap read, Bitmap write, Boolean outSide)
@@ -140,23 +166,49 @@ namespace FrontAndBackReverseSkin
         {
             if (slimCheck.Checked)
             {
-                CutOut(read, write, 3, 4, 44, 16, 44, 16, RotateFlipType.Rotate180FlipNone, outSide, 0, 16); //上
-                CutOut(read, write, 3, 4, 47, 16, 47, 16, RotateFlipType.Rotate180FlipNone, outSide, 0, 16); //下
+                if (outSide)
+                {
+                    CutOut(read, write, 3, 4, 44, 32, 52, 48, RotateFlipType.Rotate180FlipNone); //上
+                    CutOut(read, write, 3, 4, 47, 32, 55, 48, RotateFlipType.Rotate180FlipNone); //下
 
-                CutOut(read, write, 4, 12, 40, 20, 47, 20, null, outSide, 0, 16); //左
-                CutOut(read, write, 3, 12, 44, 20, 51, 20, null, outSide, 0, 16); //正面
-                CutOut(read, write, 4, 12, 47, 20, 40, 20, null, outSide, 0, 16); //右
-                CutOut(read, write, 3, 12, 51, 20, 44, 20, null, outSide, 0, 16); //後ろ
+                    CutOut(read, write, 4, 12, 40, 36, 55, 52, null); //左
+                    CutOut(read, write, 3, 12, 44, 36, 59, 52, null); //正面
+                    CutOut(read, write, 4, 12, 47, 36, 48, 52, null); //右
+                    CutOut(read, write, 3, 12, 51, 36, 52, 52, null); //後ろ
+                }
+                else
+                {
+                    CutOut(read, write, 3, 4, 44, 16, 36, 48, RotateFlipType.Rotate180FlipNone); //上
+                    CutOut(read, write, 3, 4, 47, 16, 39, 48, RotateFlipType.Rotate180FlipNone); //下
+
+                    CutOut(read, write, 4, 12, 40, 20, 39, 52, null); //左
+                    CutOut(read, write, 3, 12, 44, 20, 43, 52, null); //正面
+                    CutOut(read, write, 4, 12, 47, 20, 32, 52, null); //右
+                    CutOut(read, write, 3, 12, 51, 20, 36, 52, null); //後ろ
+                }
             }
             else
             {
-                CutOut(read, write, 4, 4, 44, 16, 44, 16, RotateFlipType.Rotate180FlipNone, outSide, 0, 16); //上
-                CutOut(read, write, 4, 4, 48, 16, 48, 16, RotateFlipType.Rotate180FlipNone, outSide, 0, 16); //下
+                if (outSide)
+                {
+                    CutOut(read, write, 4, 4, 44, 32, 52, 48, RotateFlipType.Rotate180FlipNone); //上
+                    CutOut(read, write, 4, 4, 48, 32, 56, 48, RotateFlipType.Rotate180FlipNone); //下
 
-                CutOut(read, write, 4, 12, 40, 20, 48, 20, null, outSide, 0, 16); //左
-                CutOut(read, write, 4, 12, 44, 20, 52, 20, null, outSide, 0, 16); //正面
-                CutOut(read, write, 4, 12, 48, 20, 40, 20, null, outSide, 0, 16); //右
-                CutOut(read, write, 4, 12, 52, 20, 44, 20, null, outSide, 0, 16); //後ろ
+                    CutOut(read, write, 4, 12, 40, 36, 56, 52, null); //左
+                    CutOut(read, write, 4, 12, 44, 36, 60, 52, null); //正面
+                    CutOut(read, write, 4, 12, 48, 36, 48, 52, null); //右
+                    CutOut(read, write, 4, 12, 52, 36, 52, 52, null); //後ろ
+                }
+                else
+                {
+                    CutOut(read, write, 4, 4, 44, 16, 36, 48, RotateFlipType.Rotate180FlipNone); //上
+                    CutOut(read, write, 4, 4, 48, 16, 40, 48, RotateFlipType.Rotate180FlipNone); //下
+
+                    CutOut(read, write, 4, 12, 40, 20, 40, 52, null); //左
+                    CutOut(read, write, 4, 12, 44, 20, 44, 52, null); //正面
+                    CutOut(read, write, 4, 12, 48, 20, 32, 52, null); //右
+                    CutOut(read, write, 4, 12, 52, 20, 36, 52, null); //後ろ
+                }
             }
         }
 
@@ -164,23 +216,49 @@ namespace FrontAndBackReverseSkin
         {
             if (slimCheck.Checked)
             {
-                CutOut(read, write, 3, 4, 36, 48, 36, 48, RotateFlipType.Rotate180FlipNone, outSide, 16, 0); //上
-                CutOut(read, write, 3, 4, 39, 48, 39, 48, RotateFlipType.Rotate180FlipNone, outSide, 16, 0); //下
+                if (outSide)
+                {
+                    CutOut(read, write, 3, 4, 52, 48, 44, 32, RotateFlipType.Rotate180FlipNone); //上
+                    CutOut(read, write, 3, 4, 55, 48, 47, 32, RotateFlipType.Rotate180FlipNone); //下
 
-                CutOut(read, write, 4, 12, 32, 52, 39, 52, null, outSide, 16, 0); //左
-                CutOut(read, write, 3, 12, 35, 52, 43, 52, null, outSide, 16, 0); //正面
-                CutOut(read, write, 4, 12, 39, 52, 32, 52, null, outSide, 16, 0); //右
-                CutOut(read, write, 3, 12, 43, 52, 35, 52, null, outSide, 16, 0); //後ろ
+                    CutOut(read, write, 4, 12, 48, 52, 47, 36, null); //左
+                    CutOut(read, write, 3, 12, 52, 52, 51, 36, null); //正面
+                    CutOut(read, write, 4, 12, 55, 52, 40, 36, null); //右
+                    CutOut(read, write, 3, 12, 59, 52, 44, 36, null); //後ろ
+                }
+                else
+                {
+                    CutOut(read, write, 3, 4, 36, 48, 44, 16, RotateFlipType.Rotate180FlipNone); //上
+                    CutOut(read, write, 3, 4, 39, 48, 47, 16, RotateFlipType.Rotate180FlipNone); //下
+
+                    CutOut(read, write, 4, 12, 32, 52, 47, 20, null); //左
+                    CutOut(read, write, 3, 12, 36, 52, 51, 20, null); //正面
+                    CutOut(read, write, 4, 12, 39, 52, 40, 20, null); //右
+                    CutOut(read, write, 3, 12, 43, 52, 44, 20, null); //後ろ
+                }
             }
             else
             {
-                CutOut(read, write, 4, 4, 36, 48, 36, 48, RotateFlipType.Rotate180FlipNone, outSide, 16, 0); //上
-                CutOut(read, write, 4, 4, 40, 48, 40, 48, RotateFlipType.Rotate180FlipNone, outSide, 16, 0); //下
+                if (outSide)
+                {
+                    CutOut(read, write, 4, 4, 52, 48, 44, 32, RotateFlipType.Rotate180FlipNone); //上
+                    CutOut(read, write, 4, 4, 56, 48, 48, 32, RotateFlipType.Rotate180FlipNone); //下
 
-                CutOut(read, write, 4, 12, 32, 52, 40, 52, null, outSide, 16, 0); //左
-                CutOut(read, write, 4, 12, 36, 52, 44, 52, null, outSide, 16, 0); //正面
-                CutOut(read, write, 4, 12, 40, 52, 32, 52, null, outSide, 16, 0); //右
-                CutOut(read, write, 4, 12, 44, 52, 36, 52, null, outSide, 16, 0); //後ろ
+                    CutOut(read, write, 4, 12, 48, 52, 48, 36, null); //左
+                    CutOut(read, write, 4, 12, 52, 52, 52, 36, null); //正面
+                    CutOut(read, write, 4, 12, 56, 52, 40, 36, null); //右
+                    CutOut(read, write, 4, 12, 60, 52, 44, 36, null); //後ろ
+                }
+                else
+                {
+                    CutOut(read, write, 4, 4, 36, 48, 44, 16, RotateFlipType.Rotate180FlipNone); //上
+                    CutOut(read, write, 4, 4, 40, 48, 48, 16, RotateFlipType.Rotate180FlipNone); //下
+
+                    CutOut(read, write, 4, 12, 32, 52, 48, 20, null); //左
+                    CutOut(read, write, 4, 12, 36, 52, 52, 20, null); //正面
+                    CutOut(read, write, 4, 12, 40, 52, 40, 20, null); //右
+                    CutOut(read, write, 4, 12, 44, 52, 44, 20, null); //後ろ
+                }
             }
         }
 
